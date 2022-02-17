@@ -1,3 +1,3 @@
 # sorting-algorithms
-C++
-different types of sorting algorithms and the comparison of their time complexity
+bubble_sort, insertionsort, quicksort, merge_sort and selection_sort written in C++
+the comparison of time complexity
