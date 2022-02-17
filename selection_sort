@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+void sortowaniePrzezWybieranie (int tab[], int n)
+{
+    int najmniejszaLiczba;
+
+    for(int i=0; i<n-1; i++)
+    {
+        najmniejszaLiczba = i;
+
+        for(int j=i+1; j<n; j++)
+        {
+            if(tab[j] < tab[najmniejszaLiczba])
+            {
+                najmniejszaLiczba = j;
+            }
+        }
+        swap(tab[i], tab[najmniejszaLiczba]);
+    }
+}
+
+int main()
+{
+    int rozmiar;
+
+    cout<<"Ile liczb chcesz posortowac? ";
+    cin>>rozmiar;
+
+    int tab[rozmiar];
+
+    for(int i=0; i<rozmiar; i++)
+    {
+        cout<<"Podaj wartosc: ";
+        cin>>tab[i];
+    }
+
+    sortowaniePrzezWybieranie(tab, rozmiar);
+
+
+    cout<<endl<<"Liczby po posortowaniu: ";
+    for(int i=0; i<rozmiar; i++)
+    {
+        cout<<tab[i]<<" ";
+    }
+    cout<<endl;
+
+    return 0;
+}
